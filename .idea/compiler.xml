@@ -7,15 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="challenges" />
+        <module name="Challenges" />
+        <module name="coding_challenges" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Challenges" target="17" />
       <module name="hakerrank" target="17" />
       <module name="my-java-project" target="1.7" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Challenges" options="-parameters" />
       <module name="challenges" options="-parameters" />
       <module name="hakerrank" options="-parameters" />
     </option>

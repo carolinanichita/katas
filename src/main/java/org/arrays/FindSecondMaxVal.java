@@ -1,6 +1,7 @@
 package org.arrays;
 
 // Given an array of size n, can you find the second maximum element in the array?
+
 public class FindSecondMaxVal {
     public static int findSecondMaximum(int[] arr) {
         int max = Integer.MIN_VALUE;
