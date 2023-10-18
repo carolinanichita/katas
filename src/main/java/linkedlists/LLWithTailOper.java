@@ -92,6 +92,7 @@ public class LLWithTailOper<T> {
             list.insertAtEnd(i);
         }
         System.out.println("List after inserting from 7 to 12 at the end");
+        list.printList();
 
     }
 }
