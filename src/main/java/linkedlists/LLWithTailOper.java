@@ -13,12 +13,12 @@ public class LLWithTailOper<T> {
 
     public LLWithTailOper() {
         this.headNode = null;
-        this.tailNode = null; //null initially
+        this.tailNode = null;
         this.size = 0;
     }
 
     public boolean isEmpty() {
-        if (headNode == null && tailNode == null) //checking tailNode to make sure
+        if (headNode == null && tailNode == null)
             return true;
         return false;
     }
@@ -38,8 +38,8 @@ public class LLWithTailOper<T> {
     public void insertAtHead(T data) {
         Node newNode = new Node();
         newNode.data = data;
-        newNode.nextNode = this.headNode; //Linking newNode to head's nextNode
-        newNode.prevNode = null; //it will be inserted at start so prevNode will be null
+        newNode.nextNode = this.headNode;
+        newNode.prevNode = null;
         if (!isEmpty())
             headNode.prevNode = newNode;
         else
@@ -49,17 +49,16 @@ public class LLWithTailOper<T> {
     }
 
     public void insertAtEnd(T data) {
-        if (isEmpty()) { //if list is empty then insert at head
+        if (isEmpty()) {
             insertAtHead(data);
             return;
         }
-        //make a new node and assign it the value to be inserted
         Node newNode = new Node();
         newNode.data = data;
-        newNode.nextNode = null; //it will be inserted at end so nextNode will be null
-        newNode.prevNode = tailNode; //newNode comes after tailNode so its prevNode will be tailNode
-        tailNode.nextNode = newNode; //make newNode the nextNode of tailNode
-        tailNode = newNode; //update tailNode to be the newNode
+        newNode.nextNode = null;
+        newNode.prevNode = tailNode;
+        tailNode.nextNode = newNode;
+        tailNode = newNode;
         size++;
     }
 
@@ -88,9 +87,9 @@ public class LLWithTailOper<T> {
         System.out.println("List after inserting from 0 to 5: ");
         list.printList();
 
-        for (int i = 7; i <= 12; i++) {
-            list.insertAtEnd(i);
-        }
+//        for (int i = 7; i <= 12; i++) {
+//            list.insertAtEnd(i);
+//        }
         System.out.println("List after inserting from 7 to 12 at the end");
         list.printList();
 
