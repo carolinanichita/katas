@@ -14,7 +14,6 @@ class ReverseWordsTest {
         char[] expected = {'c', 'c', 'c', 'c', 'c', ' ',
                            'b', 'b', 'b', 'b', 'b', ' ',
                            'a', 'a', 'a', 'a',};
-
         assertArrayEquals(expected, actual);
     }
 
