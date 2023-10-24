@@ -12,5 +12,4 @@ class ReverseArrOfCharTest {
         char[] expected = {'a', 'n', 'i', 'l', 'o', 'r', 'a', 'c'};
         assertArrayEquals(expected, reversed);
     }
-
 }
