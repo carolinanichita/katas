@@ -1,3 +1,4 @@
+import hash.FlightTimeMovieTime;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,6 +48,17 @@ class FlightTimeMovieTimeTest {
         boolean result = FlightTimeMovieTime.are2MovieTimesEqualToFlightTime(flightTime, movieTimes);
 
         assertFalse(result);
+    }
+
+    //What if we wanted the movie lengths to sum to something close to the flight length (say, within 20 minutes)?
+
+    @Test
+    public void assertTrueFor2MovieLengthsAreInTheCeilingPossibleTimeFLightRange() {
+        int flightTime = 120;
+        int[] movieTimes = {80,160,90,40};
+        boolean result = FlightTimeMovieTime.are2MovieTimesEqualToFlightTime(flightTime, movieTimes);
+
+        assertTrue(result);
     }
 
 }
