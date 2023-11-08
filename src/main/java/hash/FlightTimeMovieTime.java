@@ -33,16 +33,17 @@ import java.util.Set;
 //}
 
 //What if we wanted the movie lengths to sum to something close to the flight length (say, within 20 minutes)?
-
 public class FlightTimeMovieTime {
     public static boolean are2MovieTimesEqualToFlightTime(int flightTime, int[] moviesTimes) {
         Set<Integer> seenMovies = new HashSet<>();
 
         for (int firstMovieLength: moviesTimes) {
             int secondMovieLength = flightTime - firstMovieLength;
+            int ceilingSecondMovieLength = secondMovieLength+20;
+            int floorSecondMovieLength = secondMovieLength-20;
 
             Iterator<Integer> it = seenMovies.iterator();
-            if (it.hasNext() && (it.next() <= (secondMovieLength+20)) && (it.next() >= (secondMovieLength-20)) ) {
+            if (it.hasNext() && (it.next() <= ceilingSecondMovieLength) && (it.next() >= floorSecondMovieLength) ) {
                     return true;
             }
             seenMovies.add(firstMovieLength);
